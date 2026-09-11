@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
 import Home from "./pages/Home";
@@ -14,9 +15,11 @@ const App = () => {
       <Header />
 
       <main>
-        <Home features={features} />
-        {/* <About />
-        <Pricing /> */}
+        <Routes>
+          <Route path="/" element={<Home features={features} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/pricing" element={<Pricing />} />
+        </Routes>
       </main>
 
       <Footer />

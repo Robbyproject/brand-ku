@@ -11,7 +11,7 @@ const Home = ({ features }) => {
         onTap={() => console.log("Button clicked!")}
       />
 
-      {/* <CardGrid features={features} /> */}
+      <CardGrid features={features} />
     </>
   );
 };
